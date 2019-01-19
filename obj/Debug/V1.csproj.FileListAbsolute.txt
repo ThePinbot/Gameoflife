@@ -52,3 +52,13 @@ D:\Github\Gameoflife\obj\Debug\V1.csproj.GenerateResource.cache
 D:\Github\Gameoflife\obj\Debug\V1.csproj.CoreCompileInputs.cache
 D:\Github\Gameoflife\obj\Debug\V1.exe
 D:\Github\Gameoflife\obj\Debug\V1.pdb
+C:\Users\Dracacula\Desktop\GIT Repositorys\Gameoflife\bin\Debug\V1.exe.config
+C:\Users\Dracacula\Desktop\GIT Repositorys\Gameoflife\bin\Debug\V1.exe
+C:\Users\Dracacula\Desktop\GIT Repositorys\Gameoflife\bin\Debug\V1.pdb
+C:\Users\Dracacula\Desktop\GIT Repositorys\Gameoflife\obj\Debug\V1.csprojAssemblyReference.cache
+C:\Users\Dracacula\Desktop\GIT Repositorys\Gameoflife\obj\Debug\V1.LifeForm.resources
+C:\Users\Dracacula\Desktop\GIT Repositorys\Gameoflife\obj\Debug\V1.Properties.Resources.resources
+C:\Users\Dracacula\Desktop\GIT Repositorys\Gameoflife\obj\Debug\V1.csproj.GenerateResource.cache
+C:\Users\Dracacula\Desktop\GIT Repositorys\Gameoflife\obj\Debug\V1.csproj.CoreCompileInputs.cache
+C:\Users\Dracacula\Desktop\GIT Repositorys\Gameoflife\obj\Debug\V1.exe
+C:\Users\Dracacula\Desktop\GIT Repositorys\Gameoflife\obj\Debug\V1.pdb

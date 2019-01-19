@@ -69,8 +69,8 @@ namespace V1
                 summe++;
 
             if (ValOf(i, j - 1))
-
                 summe++;
+
             if (ValOf(i + 1, j - 1))
                 summe++;
 
@@ -101,15 +101,13 @@ namespace V1
             if (i < 0)
                 i = MAX_CELLS-1 ;
 
-            if (i > MAX_CELLS-1)
+            if (i >= MAX_CELLS)
                 i = 0;
-
-
 
             if (j < 0)
                 j = MAX_CELLS -1;
 
-            if (j > MAX_CELLS -1)
+            if (j >= MAX_CELLS)
                 j = 0;
             return _CC[i, j];
         }
