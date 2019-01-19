@@ -10,21 +10,29 @@ namespace V1
         // aNew Matrix mit der n+1-ten Generation
         void CalcNextGeneration(bool[,] aOld, bool[,] aNew)
         {
+           
             _CC = aOld; // sicherstellen, daﬂ _CC=aOld ist
-
+            
             for (int i = 0; i < MAX_CELLS; i++)
             {
                 for (int j = 0; j < MAX_CELLS; j++)
                 {
                     //Eine tote Zelle mit genau drei lebenden Nachbarn wird in der Folgegeneration neu geboren.
                     if (GetNeighbourCount(i, j) == 3 && _CC[i, j] == false)
+                    {
                         aNew[i, j] = true;
+                    }
+
 
                     else if (_CC[i, j] == true)
                     {
-                        //Eine lebende Zelle mit zwei oder drei lebenden Nachbarn bleibt in der Folgegeneration am Lebe
+                        //Eine lebende Zelle mit zwei oder drei lebenden Nachbarn bleibt in der Folgegeneration am Leben
                         if (GetNeighbourCount(i, j) == 2 || GetNeighbourCount(i, j) == 3)
+                        {
                             aNew[i, j] = true;
+                        }
+
+
                         //Lebende Zellen mit mehr als drei lebenden Nachbarn sterben in der Folgegeneration an ‹berbevˆlkerung.
                         else if (GetNeighbourCount(i, j) > 3)
                             aNew[i, j] = false;
@@ -91,15 +99,17 @@ namespace V1
         bool ValOf(int i, int j)
         {
             if (i < 0)
-                i = MAX_CELLS - 1;
+                i = MAX_CELLS-1 ;
 
-            if (i > MAX_CELLS - 1)
+            if (i > MAX_CELLS-1)
                 i = 0;
 
-            if (j < 0)
-                j = MAX_CELLS - 1;
 
-            if (j > MAX_CELLS - 1)
+
+            if (j < 0)
+                j = MAX_CELLS -1;
+
+            if (j > MAX_CELLS -1)
                 j = 0;
             return _CC[i, j];
         }

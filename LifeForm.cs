@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace V1
 {
@@ -15,8 +16,9 @@ namespace V1
     const int CELL_SIZE = 20;
     const int C_M = 2; // CellMargin
         List<Point>_safeList = new List<Point>();
-    #endregion
+        #endregion
     
+       
     // 2 Matritzen zur Verwaltung der n'ten und der n+1'ten Generation
     bool[,] _CA = new bool[MAX_CELLS, MAX_CELLS];
     bool[,] _CB = new bool[MAX_CELLS, MAX_CELLS];
@@ -83,18 +85,22 @@ namespace V1
     // Nächste Generation berechnen
     private void OnStepButton(object sender, EventArgs e)
     {
+
       if (_CC == _CA)
       {
         ClearCells(_CB);
         CalcNextGeneration(_CA, _CB);
         _CC = _CB;
+    
       }
       else
       {
         ClearCells(_CA);
         CalcNextGeneration(_CB, _CA);
         _CC = _CA;
-      }
+    
+            }
+    
       m_panel.Invalidate();
     }
 
@@ -117,5 +123,41 @@ namespace V1
       m_panel.Invalidate();
     }
 
-  }
+
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void safeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StreamWriter wr = new StreamWriter("file.txt");
+
+            for (int i = 0; i <_CA.Length-1; i++)
+            {
+                for (int j = 0; i < _CA.Length-1; j++)
+                {
+                    if (_CC[i, j])
+                    {
+                        wr.WriteLine(i+ "," + j);
+       
+
+                    }
+                }
+            }
+            wr.Close();
+            MessageBox.Show("Bild wurde gespeichert");
+        }
+
+
+    
+           
+  
+       
+
+
+        
+    }
 }
+
